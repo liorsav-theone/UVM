@@ -1,0 +1,12 @@
+{
+    "scope": "source.systemverilog",
+
+    "completions": [
+        {
+            "trigger": "fun",
+            "annotation": "basic function",
+            "contents": "def ${1:name}($2):\n    $0\n",
+            "kind": "snippet",
+            "details": "A simple, non-<code>async</code> function definition"
+        }    ]
+}

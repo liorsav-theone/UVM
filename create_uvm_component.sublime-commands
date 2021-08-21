@@ -1,0 +1,8 @@
+[
+  { "caption": "create uvm component",
+    "command": "create_file_tamplate",
+    "args":{
+
+    },
+  },
+]

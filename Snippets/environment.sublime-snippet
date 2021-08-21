@@ -1,0 +1,23 @@
+<snippet>
+    <content><![CDATA[
+class ${TM_FILENAME/(.+)\..+|.*/$1/:name} extends uvm_env;
+
+    `uvm_component_utils(${TM_FILENAME/(.+)\..+|.*/$1/:name})
+
+    // new - constructor
+    function new(string name = "${TM_FILENAME/(.+)\..+|.*/$1/:name}", uvm_component parent = null);
+    super.new(name, parent);
+    endfunction : new
+
+    // build_phase
+    function void build_phase(uvm_phase phase);
+        super.build_phase(phase);
+    endfunction : build_phase
+
+endclass : ${TM_FILENAME/(.+)\..+|.*/$1/:name}
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>uvm_env</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.python</scope> -->
+</snippet>

@@ -1,0 +1,11 @@
+<snippet>
+    <description>ifndef (…)</description>
+    <content><![CDATA[`ifndef __${TM_FILEPATH/(([A-Za-z]+)\/((inc)|(include)|(src)|(source))\/)|./\U(?1:$2_)\E/g}${TM_FILENAME/(([A-Z])([A-Z][a-z]))|(([a-z])([A-Z]))|([a-z])|(\.)/\U(?1:$2_$3)(?4:$5_$6)$7(?8:_)\E/g}
+`define __${TM_FILEPATH/(([A-Za-z]+)\/((inc)|(include)|(src)|(source))\/)|./\U(?1:$2_)\E/g}${TM_FILENAME/(([A-Z])([A-Z][a-z]))|(([a-z])([A-Z]))|([a-z])|(\.)/\U(?1:$2_$3)(?4:$5_$6)$7(?8:_)\E/g}
+
+${0:$SELECTION}
+
+`endif // __${TM_FILEPATH/(([A-Za-z]+)\/((inc)|(include)|(src)|(source))\/)|./\U(?1:$2_)\E/g}${TM_FILENAME/(([A-Z])([A-Z][a-z]))|(([a-z])([A-Z]))|([a-z])|(\.)/\U(?1:$2_$3)(?4:$5_$6)$7(?8:_)\E/g}
+]]></content>
+    <tabTrigger>ifnd</tabTrigger>
+</snippet>
